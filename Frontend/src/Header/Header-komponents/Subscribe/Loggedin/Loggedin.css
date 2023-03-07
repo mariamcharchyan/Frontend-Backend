@@ -1,0 +1,23 @@
+.title{
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.back-button{
+    display: block;
+    margin: 3rem auto 1rem auto;
+    width: 55%;
+    padding: 0.75rem 1rem;
+    border-radius: 25px;
+    outline: 0;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    background-color: #2d2d2d;
+    color: rgb(218, 218, 218);
+    border: 5px solid transparent;
+}
+.back-button:hover{
+    border: 5px solid #2d2d2d;
+    background-color: #000;
+}
