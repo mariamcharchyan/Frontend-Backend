@@ -6,9 +6,6 @@
   box-sizing: border-box;
 }
 /*---------------- header--------------- */
-/* .App-header{
-  background: #16445b30;
-} */
 .nav_Bar{
   padding: 2%;
   position: sticky;
@@ -75,8 +72,7 @@ justify-content: flex-end;
   height: 22px;
   width: 22px;
   border-radius:  30px;
-  /* border: 2px solid #ffffff; */
-  color:#ffffff;
+  color: #353069;
   text-align: center;
   font-size: 15px;
   margin: -15px 0 0 -10px;
@@ -317,6 +313,25 @@ color: #353069;
 .box-toy p{
   margin-top: 5%;
   color: #353069;
+}
+.product-add{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+.product-add-button{
+  color: #353069;
+  background-color: #efefef;
+  border: 2px solid #353069;
+  border-radius: 5px;
+  font-size: 18px;
+  height: 30px;
+  width: 160px;
+  cursor: pointer;
+}
+.product-add-button:hover{
+  color: #efefef;
+  background-color: #353069;
 }
 
 /*---------------- box-toys-card--------------- */

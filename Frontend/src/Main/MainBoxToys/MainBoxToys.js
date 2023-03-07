@@ -1,25 +1,33 @@
 import { Link } from 'react-router-dom';
-// import BoxToysData from './BoxsToysData';
 import { useEffect, useState } from 'react';
 
-export default function MainBoxToys(){
-const [boxToysData, setBoxToysData] = useState([]);
-useEffect(() => {
-    fetch('http://localhost:3001')
-    .then(res => res.json())
-    .then(data => setBoxToysData(data))
-
-},[])
+export default function MainBoxToys({boxToysData, handelAddProduct}){
+// const [boxToysData, setBoxToysData] = useState([]);
+// useEffect(() => {
+//     fetch('http://localhost:3001')
+//     .then(res => res.json())
+//     .then(data => setBoxToysData(data))
+// },[])
     return(
         <>
-        {boxToysData.map((toy, index) => (
-        <Link to = {`/shop/${toy.id}`} key={index} >
-            <div className='box-toy'>
-                <img src={toy.img}/>
-                <h4>{toy.name}</h4>
-                <p>$ {toy.price} USD</p>
+        {boxToysData.map((toyData, index) => (
+        
+            <div className='box-toy' key={index} >
+                <Link to = {`/shop/${toyData.id}`}>
+                <img src={toyData.img}/>
+                </Link>
+                <h4>{toyData.name}</h4>
+                <p>$ {toyData.price} USD</p>
+                <div className="product-add">
+                    <button 
+                        className="product-add-button"
+                        onClick={() => handelAddProduct(toyData)}
+                    > 
+                        Add to Cart
+                    </button>
+                </div>
             </div>
-        </Link>
+        
             
         ))}
         </>

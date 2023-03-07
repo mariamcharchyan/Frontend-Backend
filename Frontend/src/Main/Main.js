@@ -4,7 +4,7 @@ import MainFeatured from './MainFeatured/MainFeatured';
 
 
 
-export default function Main() {
+export default function Main({boxToysData, handelAddProduct}) {
 return(
 <>
 <main className="App-main">
@@ -20,7 +20,7 @@ return(
         </div>
     </div>
     <div id="box-toys" className="box-toys">
-        <MainBoxToys />
+        <MainBoxToys boxToysData={boxToysData} handelAddProduct={handelAddProduct}/>
     </div>
 </div>
 </main>

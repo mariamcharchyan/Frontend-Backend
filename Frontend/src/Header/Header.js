@@ -7,7 +7,7 @@ import { GoX } from "react-icons/go";
 import { useState } from 'react';
 
 
-export default function Header() {
+export default function Header({cartItems}) {
 
     const [isMobile, setIsMobile] = useState(false);
     return(
@@ -39,7 +39,9 @@ export default function Header() {
                     <Link to="basket" className="nac_basket">
                         <div className="nac_basket-img">
                             <img src={basket} className="basket-img" alt=""/>
-                            <div id="basket">0</div>
+                            <div id="basket">
+                                {cartItems.length === 0 ? "" : cartItems.length}
+                            </div>
                         </div>
                     </Link>
                 </div>
@@ -60,7 +62,9 @@ export default function Header() {
                     <Link to="basket" className="nac_basket">
                         <div className="nac_basket-img">
                             <img src={basket} className="basket-img" alt=""/>
-                            <div id="zambyux">0</div>
+                            <div id="basket">
+                            {cartItems.length === 0 ? "" : cartItems.length}
+                            </div>
                         </div>
                     </Link>
                 </div>
@@ -93,7 +97,9 @@ export default function Header() {
                 <Link to="basket" className="nac_basket">
                     <div className="nac_basket-img">
                         <img src={basket} className="basket-img" alt=""/>
-                        <div id="zambyux">0</div>
+                        <div id="basket">
+                            {cartItems.length === 0 ? "" : cartItems.length}
+                        </div>
                     </div>
                 </Link>    
             </div>
